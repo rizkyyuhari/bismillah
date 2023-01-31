@@ -14,7 +14,7 @@ export const LoginUser = createAsyncThunk(
   async (user, thunkAPI) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/book/login",
+        "https://a1f0-2407-0-3002-146-6dab-a18a-a4e8-e67a.ap.ngrok.io/api/v1/book/login",
         {
           email: user.email,
           password: user.password,
@@ -32,7 +32,7 @@ export const LoginUser = createAsyncThunk(
 
 export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
   try {
-    const response = await axios.get("http://localhost:8000/api/v1/book//me");
+    const response = await axios.get(" https://a1f0-2407-0-3002-146-6dab-a18a-a4e8-e67a.ap.ngrok.io/api/v1/book//me");
     return response.data;
   } catch (error) {
     if (error.response) {
@@ -43,7 +43,7 @@ export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
 });
 
 export const LogOut = createAsyncThunk("user/LogOut", async () => {
-  await axios.delete("http://localhost:8000/api/v1/book/logout");
+  await axios.delete(" https://a1f0-2407-0-3002-146-6dab-a18a-a4e8-e67a.ap.ngrok.io/api/v1/book/logout");
 });
 
 export const authSlice = createSlice({
