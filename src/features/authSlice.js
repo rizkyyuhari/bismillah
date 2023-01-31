@@ -32,7 +32,7 @@ export const LoginUser = createAsyncThunk(
 
 export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
   try {
-    const response = await axios.get(" https://a1f0-2407-0-3002-146-6dab-a18a-a4e8-e67a.ap.ngrok.io/api/v1/book//me");
+    const response = await axios.get(" https://a1f0-2407-0-3002-146-6dab-a18a-a4e8-e67a.ap.ngrok.io/api/v1/book/me");
     return response.data;
   } catch (error) {
     if (error.response) {
